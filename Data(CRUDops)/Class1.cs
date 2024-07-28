@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using AviationMaintenanceManagementSystem.ModelClasses;
 
 namespace AviationMaintenanceManagementSystem.Data_CRUDops_
 {
     public class MaintenanceContext : DbContext
     {
         //These are proprties that basically represent the tables in the database.
-        public DbSet<WorkOrder> WorkOrders { get; set; }
+        public DbSet<BasicWorkOrder> WorkOrders { get; set; }
         public DbSet<WorkCenter> WorkCenters { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -24,7 +25,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<WorkOrder>(entity =>
+            modelBuilder.Entity<BasicWorkOrder>(entity =>
             {
                 entity.HasKey(e => e.JobNumber);//Primary Key
                 entity.Property(e => e.Discrepancy).IsRequired().HasMaxLength(500);
@@ -34,7 +35,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
                 entity.Property(e => e.Time).IsRequired();
                 entity.Property(e => e.EquipmentStatus).IsRequired();
                 entity.HasOne(e => e.WorkCenter) //Each work order will have one work center
-                       .WithMany(wc => wc.WorkOrders) // Each work center will have many work orders
+                       .WithMany(wc => wc.BasicWorkOrders) // Each work center will have many work orders
                        .HasForeignKey(e => e.WorkCenterId); // Foreign Key
             });
 
@@ -53,7 +54,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
                 entity.Property(e => e.Quantity).IsRequired();
                 entity.Property(e => e.PricePerUnit).IsRequired();
                 entity.Property(e => e.Manufacturer).IsRequired().HasMaxLength(50);
-                entity.Property(e => e.DeliveryStatus).IsRequired().HasMaxLength(10);
+                entity.Property(e => e.DeliveryStatus).IsRequired().HasMaxLength(100);
 
             });
             

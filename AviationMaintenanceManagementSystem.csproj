@@ -159,7 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data%28CRUDops%29\DbContext.cs" />
-    <Compile Include="Features\Wo.cs" />
+    <Compile Include="Features\csf.cs" />
+    <Compile Include="Features\invf.cs" />
+    <Compile Include="Features\wcf.cs" />
+    <Compile Include="Features\Wof.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

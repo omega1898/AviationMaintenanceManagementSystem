@@ -163,6 +163,7 @@
     <Compile Include="Features\invf.cs" />
     <Compile Include="Features\wcf.cs" />
     <Compile Include="Features\Wof.cs" />
+    <Compile Include="Features\WoI.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

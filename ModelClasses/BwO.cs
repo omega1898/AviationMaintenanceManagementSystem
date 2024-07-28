@@ -20,5 +20,6 @@ namespace AviationMaintenanceManagementSystem.ModelClasses
         public WorkCenter WorkCenter { get; set; }//This is a navigation property
 
         public abstract void CreateWorkOrder();
+        public abstract void Process(WorkCenter AssignedWC);
     }
 }

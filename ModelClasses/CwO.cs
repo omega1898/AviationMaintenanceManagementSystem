@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using AviationMaintenanceManagementSystem.Features;
 
 namespace AviationMaintenanceManagementSystem.ModelClasses
@@ -17,8 +18,12 @@ namespace AviationMaintenanceManagementSystem.ModelClasses
 
         public override void CreateWorkOrder()
         {
-            //You would add special processes here for creating a work order for a custom work order.
-            Console.WriteLine("Special Intructions to be added in the notes.");
+            MessageBox.Show($"You are creating a Custom Work Order: {JobNumber}", "Create Work Order(Custom)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public override void Process(WorkCenter AssignedWC)
+        {
+            this.WorkCenter = AssignedWC;
+            MessageBox.Show($"You are processing a Custom Work Order: {JobNumber}.Please refer to notes.","In Process...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -14,6 +14,6 @@ namespace AviationMaintenanceManagementSystem.Features
         void CreateWorkOrder(BasicWorkOrder workOrder);
         void UpdateWorkOrder(BasicWorkOrder workOrder);
         void DeleteWorkOrder(int id);
-        void ProcessWorkOrder(int id);
+        void ProcessWorkOrder(int id,WorkCenter AssignedWC);
     }
 }

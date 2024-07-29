@@ -158,6 +158,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWorkOrder.Designer.cs">
+      <DependentUpon>CreateWorkOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,12 @@
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data%28CRUDops%29\DbContext.cs" />
+    <Compile Include="DeleteWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteWorkOrder.Designer.cs">
+      <DependentUpon>DeleteWorkOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\csf.cs" />
     <Compile Include="Features\cusI.cs" />
     <Compile Include="Features\invf.cs" />
@@ -192,6 +204,12 @@
     <Compile Include="ModelClasses\cust.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateWorkOrder.Designer.cs">
+      <DependentUpon>UpdateWorkOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkCenterform.cs">
       <SubType>Form</SubType>
     </Compile>

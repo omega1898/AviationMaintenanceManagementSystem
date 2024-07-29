@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AviationMaintenanceManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class MaintenanceDashboard : Form
     {
-        public Form1()
+        public MaintenanceDashboard()
         {
             InitializeComponent();
         }
+
     }
 }

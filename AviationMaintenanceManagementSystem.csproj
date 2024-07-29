@@ -222,6 +222,9 @@
     <Compile Include="WorkOrderForm.Designer.cs">
       <DependentUpon>WorkOrderForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateWorkOrder.resx">
+      <DependentUpon>CreateWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceDashboard.resx">
       <DependentUpon>MaintenanceDashboard.cs</DependentUpon>
     </EmbeddedResource>

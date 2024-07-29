@@ -25,6 +25,8 @@ namespace AviationMaintenanceManagementSystem
 
             btnSearch.Click += btnSearch_Click;
             btnSave.Click += btnSave_Click;
+            btnDelete.Click += btnDelete_Click;
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -53,6 +55,52 @@ namespace AviationMaintenanceManagementSystem
                 MessageBox.Show("Invalid Job Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (_currentWorkOrder != null)
+            {
+                _currentWorkOrder.Discrepancy = txtDiscrepancy.Text;
+                _currentWorkOrder.Notes = txtNotes.Text;
+                _currentWorkOrder.CorrectiveAction = txtCorrectiveAction.Text;
+                _currentWorkOrder.EquipmentStatus = txtEquipmentStatus.Text;
+                _currentWorkOrder.Date = DateTime.Parse(txtDate.Text);
+                _currentWorkOrder.Time = DateTime.Parse(txtTime.Text);
+
+                _workOrderFeature.UpdateWorkOrder(_currentWorkOrder);
+                MessageBox.Show("Work Order Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No Work Order to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_currentWorkOrder != null)
+            {
+                var confirmDelete = MessageBox.Show("Are you sure you want to delete this Work Order?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmDelete == DialogResult.Yes)
+                {
+                    _workOrderFeature.DeleteWorkOrder(_currentWorkOrder.JobNumber);
+                    txtDiscrepancy.Text = "";
+                    txtNotes.Text = "";
+                    txtWorkCenterId.Text = "";
+                    txtCorrectiveAction.Text = "";
+                    txtEquipmentStatus.Text = "";
+                    txtDate.Text = "";
+                    txtTime.Text = "";
+                }
+                    
+                MessageBox.Show("Work Order Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No Work Order to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

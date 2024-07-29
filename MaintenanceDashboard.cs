@@ -56,11 +56,6 @@ namespace AviationMaintenanceManagementSystem
             var updateWorkOrder = new UpdateWorkOrder(_workOrderFeature);
             updateWorkOrder.Show();
         }
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var deleteWorkOrder = new DeleteWorkOrder(_workOrderFeature);
-            deleteWorkOrder.Show();
-        }
         #endregion
 
         #region Customer
@@ -92,5 +87,5 @@ namespace AviationMaintenanceManagementSystem
 
 
 
-    }-
+    }
 }

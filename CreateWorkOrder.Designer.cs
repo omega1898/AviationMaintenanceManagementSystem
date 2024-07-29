@@ -52,10 +52,10 @@
             // 
             // txtCorrectiveAction
             // 
-            this.txtCorrectiveAction.Location = new System.Drawing.Point(55, 223);
+            this.txtCorrectiveAction.Location = new System.Drawing.Point(55, 284);
             this.txtCorrectiveAction.Multiline = true;
             this.txtCorrectiveAction.Name = "txtCorrectiveAction";
-            this.txtCorrectiveAction.Size = new System.Drawing.Size(691, 64);
+            this.txtCorrectiveAction.Size = new System.Drawing.Size(520, 102);
             this.txtCorrectiveAction.TabIndex = 0;
             // 
             // txtDiscrepancy
@@ -63,7 +63,7 @@
             this.txtDiscrepancy.Location = new System.Drawing.Point(55, 145);
             this.txtDiscrepancy.Multiline = true;
             this.txtDiscrepancy.Name = "txtDiscrepancy";
-            this.txtDiscrepancy.Size = new System.Drawing.Size(691, 52);
+            this.txtDiscrepancy.Size = new System.Drawing.Size(520, 113);
             this.txtDiscrepancy.TabIndex = 1;
             // 
             // label1
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 200);
+            this.label2.Location = new System.Drawing.Point(52, 261);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 3;
@@ -100,16 +100,16 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(55, 313);
+            this.txtNotes.Location = new System.Drawing.Point(55, 423);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(691, 53);
+            this.txtNotes.Size = new System.Drawing.Size(520, 84);
             this.txtNotes.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 290);
+            this.label3.Location = new System.Drawing.Point(51, 400);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 8;
@@ -166,7 +166,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(590, 16);
+            this.label7.Location = new System.Drawing.Point(418, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 20);
             this.label7.TabIndex = 15;
@@ -192,14 +192,14 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(594, 39);
+            this.textBox4.Location = new System.Drawing.Point(422, 91);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(153, 26);
             this.textBox4.TabIndex = 18;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 386);
+            this.button1.Location = new System.Drawing.Point(143, 592);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 41);
             this.button1.TabIndex = 19;
@@ -209,7 +209,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(454, 386);
+            this.button2.Location = new System.Drawing.Point(355, 592);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 41);
             this.button2.TabIndex = 20;
@@ -221,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(618, 664);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);

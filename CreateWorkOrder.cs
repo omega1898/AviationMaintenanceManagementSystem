@@ -17,29 +17,29 @@ namespace AviationMaintenanceManagementSystem
     {
         private readonly IWorkOrderFeature _workOrderFeature;
 
-        public CreateWorkOrder(IWorkCenterFeature workOrderFeature)
+        public CreateWorkOrder(IWorkOrderFeature workOrderFeature)
         {
-            _workOrderFeature = workOrderFeature();
+            _workOrderFeature = workOrderFeature;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var workOrder = new SpecialWorkOrder
+            var workOrder = new CustomWorkOrder
             {
 
-               JobNumber = Convert.ToInt32(txtJobNumber.Text),
-                WorkCenter = txtWorkCenter.Text,
-                WorkOrderType = txtWorkOrderType.Text,
-                WorkOrderStatus = txtWorkOrderStatus.Text,
-                WorkOrderStartDate = Convert.ToDateTime(txtWorkOrderStartDate.Text),
-                WorkOrderEndDate = Convert.ToDateTime(txtWorkOrderEndDate.Text),
-                WorkOrderPriority = txtWorkOrderPriority.Text,
-                WorkOrderDescription = txtWorkOrderDescription.Text,
-                WorkOrderNotes = txtWorkOrderNotes.Text,
-                WorkOrderLaborHours = Convert.ToInt32(txtWorkOrderLaborHours.Text),
-                WorkOrderLaborRate = Convert.ToDecimal(txtWorkOrderLaborRate.Text),
-                WorkOrderTotalCost = Convert.ToDecimal(txtWorkOrderTotalCost}
+                JobNumber = int.Parse(txtJobNumber.Text),
+                Discrepancy = txtDiscrepancy.Text,
+                CorrectiveAction = txtCorrectiveAction.Text,
+                Notes = txtNotes.Text,
+                Date = DateTime.Parse(txtDate.Text),
+                Time = DateTime.Parse(txtTime.Text),
+                EquipmentStatus = txtEquipmentStatus.Text,
+                WorkCenterId = int.Parse(txtWorkCenterId.Text)
+            };  
+            _workOrderFeature.CreateWorkOrder(workOrder);
+            MessageBox.Show("Work Order Created Successfully");
+            this.Close();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace AviationMaintenanceManagementSystem
          private void workOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //This will create a new instance of the WorkOrderForm.
-            var workOrders = new WorkOrderForm(_workOrderFeature);
+            var workOrderForm = new WorkOrderForm(_workOrderFeature);
             workOrderForm.Show();
         }
         private void createToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,27 +63,34 @@ namespace AviationMaintenanceManagementSystem
         }
         #endregion
 
-        private void workCenterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the WorkCenterForm.
-            var workCenterForm = new WorkCenterForm(_workCenterFeature);
-            workCenterForm.Show();
-        }
-
-        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the InventoryForm.
-            var inventoryForm = new InventoryForm(_inventoryFeature);
-            inventoryForm.Show();
-        }
-
+        #region Customer
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //This will create a new instance of the CustomerForm.
             var customerForm = new CustomerForm(_customerFeature);
             customerForm.Show();
         }
+        #endregion
 
-       
-    }
+        #region Work Center
+        private void workCenterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //This will create a new instance of the WorkCenterForm.
+            var workCenterForm = new WorkCenterForm(_workCenterFeature);
+            workCenterForm.Show();
+        }
+        #endregion
+
+        #region Inventory
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //This will create a new instance of the InventoryForm.
+            var inventoryForm = new InventoryForm(_inventoryFeature);
+            inventoryForm.Show();
+        }
+        #endregion
+
+
+
+    }-
 }

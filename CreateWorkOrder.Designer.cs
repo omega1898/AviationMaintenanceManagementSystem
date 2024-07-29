@@ -28,17 +28,17 @@
     /// </summary>
     private void InitializeComponent()
     {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCorrectiveAction = new System.Windows.Forms.TextBox();
+            this.txtDiscrepancy = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtJobNumber = new System.Windows.Forms.TextBox();
+            this.txtWorkCenterId = new System.Windows.Forms.TextBox();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtEquipmentStatus = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,21 +50,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCorrectiveAction
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 223);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(691, 64);
-            this.textBox1.TabIndex = 0;
+            this.txtCorrectiveAction.Location = new System.Drawing.Point(55, 223);
+            this.txtCorrectiveAction.Multiline = true;
+            this.txtCorrectiveAction.Name = "txtCorrectiveAction";
+            this.txtCorrectiveAction.Size = new System.Drawing.Size(691, 64);
+            this.txtCorrectiveAction.TabIndex = 0;
             // 
-            // textBox2
+            // txtDiscrepancy
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 145);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(691, 52);
-            this.textBox2.TabIndex = 1;
+            this.txtDiscrepancy.Location = new System.Drawing.Point(55, 145);
+            this.txtDiscrepancy.Multiline = true;
+            this.txtDiscrepancy.Name = "txtDiscrepancy";
+            this.txtDiscrepancy.Size = new System.Drawing.Size(691, 52);
+            this.txtDiscrepancy.TabIndex = 1;
             // 
             // label1
             // 
@@ -84,27 +84,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Corrective Action";
             // 
-            // textBox3
+            // txtJobNumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(55, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 26);
-            this.textBox3.TabIndex = 4;
+            this.txtJobNumber.Location = new System.Drawing.Point(55, 39);
+            this.txtJobNumber.Name = "txtJobNumber";
+            this.txtJobNumber.Size = new System.Drawing.Size(166, 26);
+            this.txtJobNumber.TabIndex = 4;
             // 
-            // textBox5
+            // txtWorkCenterId
             // 
-            this.textBox5.Location = new System.Drawing.Point(239, 39);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 26);
-            this.textBox5.TabIndex = 6;
+            this.txtWorkCenterId.Location = new System.Drawing.Point(239, 39);
+            this.txtWorkCenterId.Name = "txtWorkCenterId";
+            this.txtWorkCenterId.Size = new System.Drawing.Size(161, 26);
+            this.txtWorkCenterId.TabIndex = 6;
             // 
-            // textBox6
+            // txtNotes
             // 
-            this.textBox6.Location = new System.Drawing.Point(55, 313);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(691, 53);
-            this.textBox6.TabIndex = 7;
+            this.txtNotes.Location = new System.Drawing.Point(55, 313);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(691, 53);
+            this.txtNotes.TabIndex = 7;
             // 
             // label3
             // 
@@ -115,26 +115,26 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Notes";
             // 
-            // textBox7
+            // txtEquipmentStatus
             // 
-            this.textBox7.Location = new System.Drawing.Point(422, 39);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(153, 26);
-            this.textBox7.TabIndex = 9;
+            this.txtEquipmentStatus.Location = new System.Drawing.Point(422, 39);
+            this.txtEquipmentStatus.Name = "txtEquipmentStatus";
+            this.txtEquipmentStatus.Size = new System.Drawing.Size(153, 26);
+            this.txtEquipmentStatus.TabIndex = 9;
             // 
-            // textBox8
+            // txtTime
             // 
-            this.textBox8.Location = new System.Drawing.Point(239, 91);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(166, 26);
-            this.textBox8.TabIndex = 10;
+            this.txtTime.Location = new System.Drawing.Point(239, 91);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(166, 26);
+            this.txtTime.TabIndex = 10;
             // 
-            // textBox9
+            // txtDate
             // 
-            this.textBox9.Location = new System.Drawing.Point(55, 91);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(166, 26);
-            this.textBox9.TabIndex = 11;
+            this.txtDate.Location = new System.Drawing.Point(55, 91);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(166, 26);
+            this.txtDate.TabIndex = 11;
             // 
             // label4
             // 
@@ -231,17 +231,17 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtEquipmentStatus);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNotes);
+            this.Controls.Add(this.txtWorkCenterId);
+            this.Controls.Add(this.txtJobNumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDiscrepancy);
+            this.Controls.Add(this.txtCorrectiveAction);
             this.Name = "CreateWorkOrder";
             this.Text = "CreateWorkOrder";
             this.ResumeLayout(false);
@@ -251,17 +251,17 @@
 
     #endregion
 
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox txtCorrectiveAction;
+    private System.Windows.Forms.TextBox txtDiscrepancy;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox5;
-    private System.Windows.Forms.TextBox textBox6;
+    private System.Windows.Forms.TextBox txtJobNumber;
+    private System.Windows.Forms.TextBox txtWorkCenterId;
+    private System.Windows.Forms.TextBox txtNotes;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.TextBox textBox7;
-    private System.Windows.Forms.TextBox textBox8;
-    private System.Windows.Forms.TextBox textBox9;
+    private System.Windows.Forms.TextBox txtEquipmentStatus;
+    private System.Windows.Forms.TextBox txtTime;
+    private System.Windows.Forms.TextBox txtDate;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label6;

@@ -210,6 +210,18 @@
     <Compile Include="UpdateWorkOrder.Designer.cs">
       <DependentUpon>UpdateWorkOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllWorkOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllWorkOrders.Designer.cs">
+      <DependentUpon>ViewAllWorkOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewWorkOrderByJobNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewWorkOrderByJobNumber.Designer.cs">
+      <DependentUpon>ViewWorkOrderByJobNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkCenterform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +251,12 @@
     </Compile>
     <EmbeddedResource Include="UpdateWorkOrder.resx">
       <DependentUpon>UpdateWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllWorkOrders.resx">
+      <DependentUpon>ViewAllWorkOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewWorkOrderByJobNumber.resx">
+      <DependentUpon>ViewWorkOrderByJobNumber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkOrderForm.resx">
       <DependentUpon>WorkOrderForm.cs</DependentUpon>

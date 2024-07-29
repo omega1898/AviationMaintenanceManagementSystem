@@ -161,9 +161,8 @@
     <Compile Include="CreateWorkOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="..\..\CreateWorkOrder.Designer.cs">
+    <Compile Include="CreateWorkOrder.Designer.cs">
       <DependentUpon>CreateWorkOrder.cs</DependentUpon>
-      <Link>CreateWorkOrder.Designer.cs</Link>
     </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -223,9 +222,6 @@
     <Compile Include="WorkOrderForm.Designer.cs">
       <DependentUpon>WorkOrderForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateWorkOrder.resx">
-      <DependentUpon>CreateWorkOrder.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceDashboard.resx">
       <DependentUpon>MaintenanceDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +234,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateWorkOrder.resx">
+      <DependentUpon>UpdateWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkOrderForm.resx">
       <DependentUpon>WorkOrderForm.cs</DependentUpon>
     </EmbeddedResource>

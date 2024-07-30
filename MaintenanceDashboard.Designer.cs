@@ -59,7 +59,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1181, 34);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,20 +71,20 @@
             this.showAllToolStripMenuItem});
             this.workOrdersToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workOrdersToolStripMenuItem.Name = "workOrdersToolStripMenuItem";
-            this.workOrdersToolStripMenuItem.Size = new System.Drawing.Size(136, 25);
+            this.workOrdersToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.workOrdersToolStripMenuItem.Text = "Work Order";
             // 
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -94,7 +94,7 @@
             this.allToolStripMenuItem,
             this.byJobNumberToolStripMenuItem});
             this.showAllToolStripMenuItem.Name = "showAllToolStripMenuItem";
-            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
             this.showAllToolStripMenuItem.Text = "View";
             // 
             // allToolStripMenuItem
@@ -115,7 +115,7 @@
             // 
             this.workCenterToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workCenterToolStripMenuItem.Name = "workCenterToolStripMenuItem";
-            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(147, 25);
+            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
             this.workCenterToolStripMenuItem.Text = "Work Center";
             // 
             // inventoryToolStripMenuItem
@@ -123,7 +123,7 @@
             this.inventoryToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(125, 28);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
             // customerToolStripMenuItem
@@ -134,7 +134,7 @@
             this.viewCustomerToolStripMenuItem});
             this.customerToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(114, 25);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(114, 28);
             this.customerToolStripMenuItem.Text = "Customer";
             // 
             // addToolStripMenuItem
@@ -142,6 +142,7 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(330, 34);
             this.addToolStripMenuItem.Text = "Add Customer";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem1
             // 

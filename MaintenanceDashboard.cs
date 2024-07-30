@@ -50,20 +50,26 @@ namespace AviationMaintenanceManagementSystem
             var updateWorkOrder = new UpdateWorkOrder(_workOrderFeature);
             updateWorkOrder.Show();
         }
+
         #endregion
 
         #region Customer
-        
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var addCustomer = new AddCustomer(_customerFeature);
+            addCustomer.Show();
+        }
+
         #endregion
 
         #region Work Center
-        
+
         #endregion
 
         #region Inventory
 
         #endregion
 
-        
+
     }
 }

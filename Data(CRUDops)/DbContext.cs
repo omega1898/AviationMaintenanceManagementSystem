@@ -11,6 +11,9 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
 {
     public class MaintenanceContext : DbContext
     {
+        public MaintenanceContext(DbContextOptions<MaintenanceContext> options) : base(options)
+        {
+        }
         //These are proprties that basically represent the tables in the database.
         public DbSet<BasicWorkOrder> WorkOrders { get; set; }
         public DbSet<WorkCenter> WorkCenters { get; set; }

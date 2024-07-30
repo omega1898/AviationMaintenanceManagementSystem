@@ -30,12 +30,6 @@ namespace AviationMaintenanceManagementSystem
             InitializeComponent();
         }
         #region Work Orders
-         private void workOrdersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the WorkOrderForm.
-            var workOrderForm = new WorkOrderForm(_workOrderFeature);
-            workOrderForm.Show();
-        }
         private void createToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var createWorkOrder = new CreateWorkOrder(_workOrderFeature);
@@ -59,33 +53,17 @@ namespace AviationMaintenanceManagementSystem
         #endregion
 
         #region Customer
-        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the CustomerForm.
-            var customerForm = new CustomerForm(_customerFeature);
-            customerForm.Show();
-        }
+        
         #endregion
 
         #region Work Center
-        private void workCenterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the WorkCenterForm.
-            var workCenterForm = new WorkCenterForm(_workCenterFeature);
-            workCenterForm.Show();
-        }
+        
         #endregion
 
         #region Inventory
-        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //This will create a new instance of the InventoryForm.
-            var inventoryForm = new InventoryForm(_inventoryFeature);
-            inventoryForm.Show();
-        }
+
         #endregion
 
-
-
+        
     }
 }

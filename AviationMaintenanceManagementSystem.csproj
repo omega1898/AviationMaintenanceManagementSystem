@@ -170,12 +170,6 @@
     <Compile Include="CreateWorkOrder.Designer.cs">
       <DependentUpon>CreateWorkOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerForm.Designer.cs">
-      <DependentUpon>CustomerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data%28CRUDops%29\DbContext.cs" />
     <Compile Include="Features\csf.cs" />
     <Compile Include="Features\cusI.cs" />
@@ -185,12 +179,6 @@
     <Compile Include="Features\wcI.cs" />
     <Compile Include="Features\Wof.cs" />
     <Compile Include="Features\WoI.cs" />
-    <Compile Include="InventoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InventoryForm.Designer.cs">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MaintenanceDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +192,12 @@
     <Compile Include="ModelClasses\cust.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateWorkOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +234,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateWorkOrder.resx">
       <DependentUpon>UpdateWorkOrder.cs</DependentUpon>
     </EmbeddedResource>

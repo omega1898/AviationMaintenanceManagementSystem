@@ -23,8 +23,10 @@ namespace AviationMaintenanceManagementSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(txtJobNumber.Text, out _) && int.TryParse(txtWorkCenterId.Text, out _))
+            {
             var workOrder = new CustomWorkOrder
             {
 
@@ -36,10 +38,22 @@ namespace AviationMaintenanceManagementSystem
                 Time = DateTime.Parse(txtTime.Text),
                 EquipmentStatus = txtEquipmentStatus.Text,
                 WorkCenterId = int.Parse(txtWorkCenterId.Text)
-            };  
+            };
             _workOrderFeature.CreateWorkOrder(workOrder);
             MessageBox.Show("Work Order Created Successfully");
             this.Close();
         }
+            else
+            {
+                MessageBox.Show("Please enter valid numerical values for Job Number and Work Center ID.");
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Close the form without saving any data
+            this.Close();
+        }
     }
+    
 }

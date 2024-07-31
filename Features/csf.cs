@@ -10,9 +10,9 @@ namespace AviationMaintenanceManagementSystem.Features
     public interface ICustomerFeature
     {
         IEnumerable<Customer> GetAllCustomers();
-        Customer GetCustomerById(int id);
+        Customer GetCustomerById(string id);
         void CreateCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
-        void DeleteCustomer(int id);
+        void DeleteCustomer(string id);
     }
 }

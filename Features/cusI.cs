@@ -21,7 +21,7 @@ namespace AviationMaintenanceManagementSystem.Features
         {
             return _context.Customers.ToList();
         }
-        public Customer GetCustomerById(int id)
+        public Customer GetCustomerById(string id)
         {
             var customer = _context.Customers.Find(id);
             if (customer != null)
@@ -39,7 +39,7 @@ namespace AviationMaintenanceManagementSystem.Features
             _context.Customers.Add(customer);
             _context.SaveChanges();
         }
-        public void DeleteCustomer(int id)
+        public void DeleteCustomer(string id)
         {
             var customer = _context.Customers.Find(id);
             if (customer != null)

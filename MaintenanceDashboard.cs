@@ -59,6 +59,21 @@ namespace AviationMaintenanceManagementSystem
             var addCustomer = new AddCustomer(_customerFeature);
             addCustomer.Show();
         }
+        private void allCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var viewAllCustomers = new ViewAllCustomers(_customerFeature);
+            viewAllCustomers.Show();
+        }
+
+        private void byCustomerIDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var viewCustomerByID = new ViewCustomerById(_customerFeature);
+            viewCustomerByID.Show();
+        }
+        private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 

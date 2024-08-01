@@ -244,6 +244,12 @@
     <Compile Include="ViewAllWorkOrders.Designer.cs">
       <DependentUpon>ViewAllWorkOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewCustomerById.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomerById.Designer.cs">
+      <DependentUpon>ViewCustomerById.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewWorkOrderByJobNumber.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllWorkOrders.resx">
       <DependentUpon>ViewAllWorkOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomerById.resx">
+      <DependentUpon>ViewCustomerById.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewWorkOrderByJobNumber.resx">
       <DependentUpon>ViewWorkOrderByJobNumber.cs</DependentUpon>

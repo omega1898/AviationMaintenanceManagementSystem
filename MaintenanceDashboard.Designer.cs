@@ -149,6 +149,7 @@
             this.updateToolStripMenuItem1.Name = "updateToolStripMenuItem1";
             this.updateToolStripMenuItem1.Size = new System.Drawing.Size(330, 34);
             this.updateToolStripMenuItem1.Text = "Update Customer Info";
+            this.updateToolStripMenuItem1.Click += new System.EventHandler(this.updateToolStripMenuItem1_Click);
             // 
             // viewCustomerToolStripMenuItem
             // 
@@ -164,12 +165,14 @@
             this.allCustomersToolStripMenuItem.Name = "allCustomersToolStripMenuItem";
             this.allCustomersToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.allCustomersToolStripMenuItem.Text = "All Customers";
+            this.allCustomersToolStripMenuItem.Click += new System.EventHandler(this.allCustomersToolStripMenuItem_Click);
             // 
             // byCustomerIDToolStripMenuItem
             // 
             this.byCustomerIDToolStripMenuItem.Name = "byCustomerIDToolStripMenuItem";
             this.byCustomerIDToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.byCustomerIDToolStripMenuItem.Text = "By  Customer ID";
+            this.byCustomerIDToolStripMenuItem.Click += new System.EventHandler(this.byCustomerIDToolStripMenuItem_Click);
             // 
             // MaintenanceDashboard
             // 

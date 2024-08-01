@@ -189,6 +189,7 @@
             this.addPartsToolStripMenuItem.Name = "addPartsToolStripMenuItem";
             this.addPartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.addPartsToolStripMenuItem.Text = "Add Parts";
+            this.addPartsToolStripMenuItem.Click += new System.EventHandler(this.addPartsToolStripMenuItem_Click);
             // 
             // updatePartsToolStripMenuItem
             // 

@@ -265,6 +265,9 @@
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddInventory.resx">
+      <DependentUpon>AddInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateWorkOrder.resx">
       <DependentUpon>CreateWorkOrder.cs</DependentUpon>
     </EmbeddedResource>

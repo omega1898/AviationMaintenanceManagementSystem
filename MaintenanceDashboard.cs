@@ -76,6 +76,7 @@ namespace AviationMaintenanceManagementSystem
             updateCustomer.Show();
         }
 
+
         #endregion
 
         #region Work Center
@@ -83,6 +84,11 @@ namespace AviationMaintenanceManagementSystem
         #endregion
 
         #region Inventory
+        private void addPartsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var addInventory = new AddInventory(_inventoryFeature);
+            addInventory.Show();
+        }
 
         #endregion
 

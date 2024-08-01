@@ -72,7 +72,8 @@ namespace AviationMaintenanceManagementSystem
         }
         private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            var updateCustomer = new UpdateCustomer(_customerFeature);
+            updateCustomer.Show();
         }
 
         #endregion

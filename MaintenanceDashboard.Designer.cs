@@ -43,6 +43,12 @@
             this.viewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byCustomerIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatePartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewAllInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPartNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewWorkCenterInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +127,10 @@
             // inventoryToolStripMenuItem
             // 
             this.inventoryToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
+            this.inventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addPartsToolStripMenuItem,
+            this.updatePartsToolStripMenuItem,
+            this.viewInventoryToolStripMenuItem});
             this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(125, 28);
@@ -174,6 +184,46 @@
             this.byCustomerIDToolStripMenuItem.Text = "By  Customer ID";
             this.byCustomerIDToolStripMenuItem.Click += new System.EventHandler(this.byCustomerIDToolStripMenuItem_Click);
             // 
+            // addPartsToolStripMenuItem
+            // 
+            this.addPartsToolStripMenuItem.Name = "addPartsToolStripMenuItem";
+            this.addPartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addPartsToolStripMenuItem.Text = "Add Parts";
+            // 
+            // updatePartsToolStripMenuItem
+            // 
+            this.updatePartsToolStripMenuItem.Name = "updatePartsToolStripMenuItem";
+            this.updatePartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updatePartsToolStripMenuItem.Text = "Update Parts";
+            // 
+            // viewInventoryToolStripMenuItem
+            // 
+            this.viewInventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewAllInventoryToolStripMenuItem,
+            this.viewPartNumberToolStripMenuItem,
+            this.viewWorkCenterInventoryToolStripMenuItem});
+            this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
+            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewInventoryToolStripMenuItem.Text = "View Inventory";
+            // 
+            // viewAllInventoryToolStripMenuItem
+            // 
+            this.viewAllInventoryToolStripMenuItem.Name = "viewAllInventoryToolStripMenuItem";
+            this.viewAllInventoryToolStripMenuItem.Size = new System.Drawing.Size(308, 34);
+            this.viewAllInventoryToolStripMenuItem.Text = "View All Inventory";
+            // 
+            // viewPartNumberToolStripMenuItem
+            // 
+            this.viewPartNumberToolStripMenuItem.Name = "viewPartNumberToolStripMenuItem";
+            this.viewPartNumberToolStripMenuItem.Size = new System.Drawing.Size(308, 34);
+            this.viewPartNumberToolStripMenuItem.Text = "View Part Number";
+            // 
+            // viewWorkCenterInventoryToolStripMenuItem
+            // 
+            this.viewWorkCenterInventoryToolStripMenuItem.Name = "viewWorkCenterInventoryToolStripMenuItem";
+            this.viewWorkCenterInventoryToolStripMenuItem.Size = new System.Drawing.Size(396, 34);
+            this.viewWorkCenterInventoryToolStripMenuItem.Text = "View Work Center Inventory";
+            // 
             // MaintenanceDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -209,6 +259,12 @@
         private System.Windows.Forms.ToolStripMenuItem viewCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allCustomersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byCustomerIDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPartsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatePartsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewInventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewAllInventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPartNumberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewWorkCenterInventoryToolStripMenuItem;
     }
 }
 

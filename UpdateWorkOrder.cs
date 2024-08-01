@@ -26,6 +26,7 @@ namespace AviationMaintenanceManagementSystem
             btnSearch.Click += btnSearch_Click;
             btnSave.Click += btnSave_Click;
             btnDelete.Click += btnDelete_Click;
+            btnCancel.Click += btnCancel_Click;
 
         }
 
@@ -101,6 +102,11 @@ namespace AviationMaintenanceManagementSystem
                 MessageBox.Show("No Work Order to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

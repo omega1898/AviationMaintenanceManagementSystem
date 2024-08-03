@@ -7,6 +7,8 @@ using AviationMaintenanceManagementSystem.ModelClasses;
 using AviationMaintenanceManagementSystem.Data_CRUDops_;
 using System.Windows.Forms;
 
+//This is the implementation of the IWorkOrderFeature interface. It is the actual class that will be used to perform CRUD operations on the WorkOrderTemplate class.
+
 namespace AviationMaintenanceManagementSystem.Features
 {
     public class WorkOrderFeature : IWorkOrderFeature
@@ -22,7 +24,7 @@ namespace AviationMaintenanceManagementSystem.Features
             //Thisn is to retrieve all work orders from the database.
             return _context.WorkOrders.ToList();
         }
-        public WorkOrderTemplate GetWorkOrderById(int id)
+        public WorkOrderTemplate GetWorkOrderById(string id)
         {
             //This is to retrieve a specific work order by its id(which is the job number) from the database.
             var workOrder = _context.WorkOrders.Find(id);
@@ -43,7 +45,7 @@ namespace AviationMaintenanceManagementSystem.Features
             //You have to save the changes to the database.
             _context.SaveChanges();
         }
-        public void DeleteWorkOrder(int id)
+        public void DeleteWorkOrder(string id)
         {
             //This is to delete a work order from the database.
             var workOrder = _context.WorkOrders.Find(id);
@@ -63,20 +65,6 @@ namespace AviationMaintenanceManagementSystem.Features
             //Update and save changes to a work order.
             _context.WorkOrders.Update((ActualWorkOrder)workOrder);// Casting the work order to an ActualWorkOrder.
             _context.SaveChanges();
-        }
-        public void ProcessWorkOrder(int id, WorkCenter AssignedWC)
-        {
-            //This is to process a work order.Which basically is assgining the work order to a work center.
-            var workOrder = _context.WorkOrders.Find(id);
-            if (workOrder != null)
-            {
-                workOrder.Process(AssignedWC);
-                _context.SaveChanges();
-            }
-            else
-            {
-                MessageBox.Show($"Work Order {id} not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

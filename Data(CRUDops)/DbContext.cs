@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.EntityFrameworkCore.Design;
 using AviationMaintenanceManagementSystem.ModelClasses;
 using AviationMaintenanceManagementSystem.Features;
 
@@ -38,6 +40,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
                 entity.Property(e => e.Date).IsRequired();
                 entity.Property(e => e.Time).IsRequired();
                 entity.Property(e => e.EquipmentStatus).IsRequired();
+                entity.Property(e => e.SerialNumber).IsRequired();
                 entity.HasOne(e => e.WorkCenter) //Each work order will have one work center
                        .WithMany(wc => wc.ActualWorkOrders) // Each work center will have many work orders
                        .HasForeignKey(e => e.WorkCenterId); // Foreign Key
@@ -70,7 +73,10 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
                 entity.Property(e => e.Email).IsRequired().HasMaxLength(50);
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(100);
             });
-               
         }
     }
+
+
 }
+    
+

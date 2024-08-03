@@ -11,6 +11,8 @@ using AviationMaintenanceManagementSystem.Features;
 using AviationMaintenanceManagementSystem.ModelClasses;
 using AviationMaintenanceManagementSystem.Data_CRUDops_;
 
+
+//This form is used to create a new work order. It is a child form of the WorkOrderForm form.
 namespace AviationMaintenanceManagementSystem
 {
     public partial class CreateWorkOrder : Form
@@ -25,29 +27,26 @@ namespace AviationMaintenanceManagementSystem
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtJobNumber.Text, out _) && int.TryParse(txtWorkCenterId.Text, out _))
             {
-            var workOrder = new ActualWorkOrder
-            {
+                var workOrder = new ActualWorkOrder
+                {
 
-                JobNumber = int.Parse(txtJobNumber.Text),
-                Discrepancy = txtDiscrepancy.Text,
-                CorrectiveAction = txtCorrectiveAction.Text,
-                Notes = txtNotes.Text,
-                Date = DateTime.Parse(txtDate.Text),
-                Time = DateTime.Parse(txtTime.Text),
-                EquipmentStatus = txtEquipmentStatus.Text,
-                WorkCenterId = int.Parse(txtWorkCenterId.Text)
-            };
-            _workOrderFeature.CreateWorkOrder(workOrder);
-            MessageBox.Show("Work Order Created Successfully");
-            this.Close();
-        }
-            else
-            {
-                MessageBox.Show("Please enter valid numerical values for Job Number and Work Center ID.");
+                    JobNumber = txtJobNumber.Text,
+                    Discrepancy = txtDiscrepancy.Text,
+                    CorrectiveAction = txtCorrectiveAction.Text,
+                    Notes = txtNotes.Text,
+                    Date = DateTime.Parse(txtDate.Text),
+                    Time = DateTime.Parse(txtTime.Text),
+                    EquipmentStatus = txtEquipmentStatus.Text,
+                    WorkCenterId = int.Parse(txtWorkCenterId.Text)
+                };
+                _workOrderFeature.CreateWorkOrder(workOrder);
+                MessageBox.Show("Work Order Created Successfully");
+                this.Close();
             }
         }
+    
+        
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

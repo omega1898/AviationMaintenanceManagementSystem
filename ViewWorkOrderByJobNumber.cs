@@ -23,21 +23,18 @@ namespace AviationMaintenanceManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtJobNumber.Text, out int jobNumber))
-            {
+            string jobNumber = txtJobNumber.Text;
+            
                 var workOrder = _workOrderFeature.GetWorkOrderById(jobNumber);
                 if (workOrder != null)
                 {
                     workOrderDataGridView.DataSource = new[] { workOrder };
                 }
-                else
-                {
-                    MessageBox.Show("Work Order not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+           
+            
             else
             {
-                MessageBox.Show("Please enter a valid Job Number", "Invalid Job Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Job Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

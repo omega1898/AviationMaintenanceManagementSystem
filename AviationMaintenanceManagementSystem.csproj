@@ -205,6 +205,7 @@
       <DependentUpon>CreateWorkOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Data%28CRUDops%29\DbContext.cs" />
+    <Compile Include="Factories\DesignTimeDbContextFactory.cs" />
     <Compile Include="Features\csf.cs" />
     <Compile Include="Features\cusI.cs" />
     <Compile Include="Features\invf.cs" />
@@ -219,8 +220,13 @@
     <Compile Include="MaintenanceDashboard.Designer.cs">
       <DependentUpon>MaintenanceDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelClasses\BwO.cs" />
-    <Compile Include="ModelClasses\CwO.cs" />
+    <Compile Include="Migrations\20240803063246_InitialCreate.cs" />
+    <Compile Include="Migrations\20240803063246_InitialCreate.Designer.cs">
+      <DependentUpon>20240803063246_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MaintenanceContextModelSnapshot.cs" />
+    <Compile Include="ModelClasses\WOTemplate.cs" />
+    <Compile Include="ModelClasses\WOActual.cs" />
     <Compile Include="ModelClasses\wc.cs" />
     <Compile Include="ModelClasses\inv.cs" />
     <Compile Include="ModelClasses\cust.cs" />

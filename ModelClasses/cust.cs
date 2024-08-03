@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AviationMaintenanceManagementSystem.Features;
+using System.Windows.Forms;
+using AviationMaintenanceManagementSystem.Data_CRUDops_;
 
 namespace AviationMaintenanceManagementSystem.ModelClasses
 {

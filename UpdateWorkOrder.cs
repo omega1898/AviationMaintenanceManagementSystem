@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AviationMaintenanceManagementSystem.Features;
 using AviationMaintenanceManagementSystem.ModelClasses;
 
+//This form is used to update a work order. It allows the user to search for a work order by job number, and then update the work order details.
 namespace AviationMaintenanceManagementSystem
 {
     public partial class UpdateWorkOrder : Form
@@ -32,25 +33,21 @@ namespace AviationMaintenanceManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(int.TryParse(txtJobNumber.Text, out int jobNumber))
-            {
-                _currentWorkOrder = _workOrderFeature.GetWorkOrderById(jobNumber);
-                if (_currentWorkOrder != null)
-                {
-                    //Populate the form with the work order details
-                    txtDiscrepancy.Text = _currentWorkOrder.Discrepancy;
-                    txtNotes.Text = _currentWorkOrder.Notes;
-                    txtWorkCenterId.Text = _currentWorkOrder.WorkCenter.Name;
-                    txtCorrectiveAction.Text = _currentWorkOrder.CorrectiveAction;
-                    txtEquipmentStatus.Text = _currentWorkOrder.EquipmentStatus;
-                    txtDate.Text = _currentWorkOrder.Date.ToString();
-                    txtTime.Text = _currentWorkOrder.Time.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Work Order not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+           string jobNumber = txtJobNumber.Text;
+          _currentWorkOrder = _workOrderFeature.GetWorkOrderById(jobNumber);
+          if (_currentWorkOrder != null)
+         {
+           //Populate the form with the work order details
+            txtDiscrepancy.Text = _currentWorkOrder.Discrepancy;
+            txtNotes.Text = _currentWorkOrder.Notes;
+            txtWorkCenterId.Text = _currentWorkOrder.WorkCenter.Name;
+            txtCorrectiveAction.Text = _currentWorkOrder.CorrectiveAction;
+            txtEquipmentStatus.Text = _currentWorkOrder.EquipmentStatus; 
+            txtDate.Text = _currentWorkOrder.Date.ToString();
+            txtTime.Text = _currentWorkOrder.Time.ToString();
+            txtSerialNo.Text = _currentWorkOrder.SerialNumber; 
+           }
+            
             else
             {
                 MessageBox.Show("Invalid Job Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,6 +65,7 @@ namespace AviationMaintenanceManagementSystem
                 _currentWorkOrder.EquipmentStatus = txtEquipmentStatus.Text;
                 _currentWorkOrder.Date = DateTime.Parse(txtDate.Text);
                 _currentWorkOrder.Time = DateTime.Parse(txtTime.Text);
+                _currentWorkOrder.SerialNumber = txtSerialNo.Text;
 
                 _workOrderFeature.UpdateWorkOrder(_currentWorkOrder);
                 MessageBox.Show("Work Order Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,6 +91,7 @@ namespace AviationMaintenanceManagementSystem
                     txtEquipmentStatus.Text = "";
                     txtDate.Text = "";
                     txtTime.Text = "";
+                    txtSerialNo.Text = "";
                 }
                     
                 MessageBox.Show("Work Order Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -108,5 +107,6 @@ namespace AviationMaintenanceManagementSystem
         {
             this.Close();
         }
+
     }
 }

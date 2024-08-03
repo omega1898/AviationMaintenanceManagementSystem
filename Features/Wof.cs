@@ -9,11 +9,10 @@ namespace AviationMaintenanceManagementSystem.Features
 {
     public interface IWorkOrderFeature
     {
-        IEnumerable<BasicWorkOrder> GetAllWorkOrders();
-        BasicWorkOrder GetWorkOrderById(int id);
-        void CreateWorkOrder(BasicWorkOrder workOrder);
-        void UpdateWorkOrder(BasicWorkOrder workOrder);
+        IEnumerable<WorkOrderTemplate> GetAllWorkOrders();
+        WorkOrderTemplate GetWorkOrderById(int id);
+        void CreateWorkOrder(WorkOrderTemplate workOrder);
+        void UpdateWorkOrder(WorkOrderTemplate workOrder);
         void DeleteWorkOrder(int id);
-        void ProcessWorkOrder(int id,WorkCenter AssignedWC);
     }
 }

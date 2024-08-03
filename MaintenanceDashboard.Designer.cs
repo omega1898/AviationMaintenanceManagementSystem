@@ -37,18 +37,24 @@
             this.byJobNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byCustomerIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPartNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewWorkCenterInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byCustomerIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allWCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byWCIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createWCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateWCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assignedJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +71,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(1181, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,7 +83,7 @@
             this.showAllToolStripMenuItem});
             this.workOrdersToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workOrdersToolStripMenuItem.Name = "workOrdersToolStripMenuItem";
-            this.workOrdersToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
+            this.workOrdersToolStripMenuItem.Size = new System.Drawing.Size(136, 25);
             this.workOrdersToolStripMenuItem.Text = "Work Order";
             // 
             // createToolStripMenuItem
@@ -119,9 +125,14 @@
             // 
             // workCenterToolStripMenuItem
             // 
+            this.workCenterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem,
+            this.createWCToolStripMenuItem,
+            this.updateWCToolStripMenuItem,
+            this.assignedJobsToolStripMenuItem});
             this.workCenterToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workCenterToolStripMenuItem.Name = "workCenterToolStripMenuItem";
-            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
+            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(147, 25);
             this.workCenterToolStripMenuItem.Text = "Work Center";
             // 
             // inventoryToolStripMenuItem
@@ -133,8 +144,49 @@
             this.viewInventoryToolStripMenuItem});
             this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(125, 28);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
             this.inventoryToolStripMenuItem.Text = "Inventory";
+            // 
+            // addPartsToolStripMenuItem
+            // 
+            this.addPartsToolStripMenuItem.Name = "addPartsToolStripMenuItem";
+            this.addPartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addPartsToolStripMenuItem.Text = "Add Parts";
+            this.addPartsToolStripMenuItem.Click += new System.EventHandler(this.addPartsToolStripMenuItem_Click);
+            // 
+            // updatePartsToolStripMenuItem
+            // 
+            this.updatePartsToolStripMenuItem.Name = "updatePartsToolStripMenuItem";
+            this.updatePartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updatePartsToolStripMenuItem.Text = "Update Parts";
+            // 
+            // viewInventoryToolStripMenuItem
+            // 
+            this.viewInventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewAllInventoryToolStripMenuItem,
+            this.viewPartNumberToolStripMenuItem,
+            this.viewWorkCenterInventoryToolStripMenuItem});
+            this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
+            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewInventoryToolStripMenuItem.Text = "View Inventory";
+            // 
+            // viewAllInventoryToolStripMenuItem
+            // 
+            this.viewAllInventoryToolStripMenuItem.Name = "viewAllInventoryToolStripMenuItem";
+            this.viewAllInventoryToolStripMenuItem.Size = new System.Drawing.Size(396, 34);
+            this.viewAllInventoryToolStripMenuItem.Text = "View All Inventory";
+            // 
+            // viewPartNumberToolStripMenuItem
+            // 
+            this.viewPartNumberToolStripMenuItem.Name = "viewPartNumberToolStripMenuItem";
+            this.viewPartNumberToolStripMenuItem.Size = new System.Drawing.Size(396, 34);
+            this.viewPartNumberToolStripMenuItem.Text = "View Part Number";
+            // 
+            // viewWorkCenterInventoryToolStripMenuItem
+            // 
+            this.viewWorkCenterInventoryToolStripMenuItem.Name = "viewWorkCenterInventoryToolStripMenuItem";
+            this.viewWorkCenterInventoryToolStripMenuItem.Size = new System.Drawing.Size(396, 34);
+            this.viewWorkCenterInventoryToolStripMenuItem.Text = "View Work Center Inventory";
             // 
             // customerToolStripMenuItem
             // 
@@ -144,7 +196,7 @@
             this.viewCustomerToolStripMenuItem});
             this.customerToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(114, 28);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(114, 25);
             this.customerToolStripMenuItem.Text = "Customer";
             // 
             // addToolStripMenuItem
@@ -184,46 +236,44 @@
             this.byCustomerIDToolStripMenuItem.Text = "By  Customer ID";
             this.byCustomerIDToolStripMenuItem.Click += new System.EventHandler(this.byCustomerIDToolStripMenuItem_Click);
             // 
-            // addPartsToolStripMenuItem
+            // viewToolStripMenuItem
             // 
-            this.addPartsToolStripMenuItem.Name = "addPartsToolStripMenuItem";
-            this.addPartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.addPartsToolStripMenuItem.Text = "Add Parts";
-            this.addPartsToolStripMenuItem.Click += new System.EventHandler(this.addPartsToolStripMenuItem_Click);
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allWCToolStripMenuItem,
+            this.byWCIDToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewToolStripMenuItem.Text = "View";
             // 
-            // updatePartsToolStripMenuItem
+            // allWCToolStripMenuItem
             // 
-            this.updatePartsToolStripMenuItem.Name = "updatePartsToolStripMenuItem";
-            this.updatePartsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.updatePartsToolStripMenuItem.Text = "Update Parts";
+            this.allWCToolStripMenuItem.Name = "allWCToolStripMenuItem";
+            this.allWCToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.allWCToolStripMenuItem.Text = "All W/C";
             // 
-            // viewInventoryToolStripMenuItem
+            // byWCIDToolStripMenuItem
             // 
-            this.viewInventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewAllInventoryToolStripMenuItem,
-            this.viewPartNumberToolStripMenuItem,
-            this.viewWorkCenterInventoryToolStripMenuItem});
-            this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
-            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.viewInventoryToolStripMenuItem.Text = "View Inventory";
+            this.byWCIDToolStripMenuItem.Name = "byWCIDToolStripMenuItem";
+            this.byWCIDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.byWCIDToolStripMenuItem.Text = "By W/C ID";
             // 
-            // viewAllInventoryToolStripMenuItem
+            // createWCToolStripMenuItem
             // 
-            this.viewAllInventoryToolStripMenuItem.Name = "viewAllInventoryToolStripMenuItem";
-            this.viewAllInventoryToolStripMenuItem.Size = new System.Drawing.Size(308, 34);
-            this.viewAllInventoryToolStripMenuItem.Text = "View All Inventory";
+            this.createWCToolStripMenuItem.Name = "createWCToolStripMenuItem";
+            this.createWCToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.createWCToolStripMenuItem.Text = "Create W/C";
             // 
-            // viewPartNumberToolStripMenuItem
+            // updateWCToolStripMenuItem
             // 
-            this.viewPartNumberToolStripMenuItem.Name = "viewPartNumberToolStripMenuItem";
-            this.viewPartNumberToolStripMenuItem.Size = new System.Drawing.Size(308, 34);
-            this.viewPartNumberToolStripMenuItem.Text = "View Part Number";
+            this.updateWCToolStripMenuItem.Name = "updateWCToolStripMenuItem";
+            this.updateWCToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updateWCToolStripMenuItem.Text = "Update W/C";
             // 
-            // viewWorkCenterInventoryToolStripMenuItem
+            // assignedJobsToolStripMenuItem
             // 
-            this.viewWorkCenterInventoryToolStripMenuItem.Name = "viewWorkCenterInventoryToolStripMenuItem";
-            this.viewWorkCenterInventoryToolStripMenuItem.Size = new System.Drawing.Size(396, 34);
-            this.viewWorkCenterInventoryToolStripMenuItem.Text = "View Work Center Inventory";
+            this.assignedJobsToolStripMenuItem.Name = "assignedJobsToolStripMenuItem";
+            this.assignedJobsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.assignedJobsToolStripMenuItem.Text = "Assigned Jobs";
             // 
             // MaintenanceDashboard
             // 
@@ -266,6 +316,12 @@
         private System.Windows.Forms.ToolStripMenuItem viewAllInventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPartNumberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewWorkCenterInventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allWCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byWCIDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createWCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateWCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assignedJobsToolStripMenuItem;
     }
 }
 

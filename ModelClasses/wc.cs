@@ -15,7 +15,7 @@ namespace AviationMaintenanceManagementSystem.ModelClasses
         public string PhoneExtension { get; set; }
 
         //Navigation Property
-        public List<BasicWorkOrder> BasicWorkOrders { get; set; } = new List<BasicWorkOrder>();
+        public List<ActualWorkOrder> ActualWorkOrders { get; set; } = new List<ActualWorkOrder>();
     }
     
 }

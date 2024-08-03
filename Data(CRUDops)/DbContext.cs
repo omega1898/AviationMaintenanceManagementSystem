@@ -15,7 +15,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
         {
         }
         //These are proprties that basically represent the tables in the database.
-        public DbSet<BasicWorkOrder> WorkOrders { get; set; }
+        public DbSet<ActualWorkOrder> WorkOrders { get; set; }
         public DbSet<WorkCenter> WorkCenters { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -29,7 +29,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BasicWorkOrder>(entity =>
+            modelBuilder.Entity<ActualWorkOrder>(entity =>
             {
                 entity.HasKey(e => e.JobNumber);//Primary Key
                 entity.Property(e => e.Discrepancy).IsRequired().HasMaxLength(500);
@@ -39,7 +39,7 @@ namespace AviationMaintenanceManagementSystem.Data_CRUDops_
                 entity.Property(e => e.Time).IsRequired();
                 entity.Property(e => e.EquipmentStatus).IsRequired();
                 entity.HasOne(e => e.WorkCenter) //Each work order will have one work center
-                       .WithMany(wc => wc.BasicWorkOrders) // Each work center will have many work orders
+                       .WithMany(wc => wc.ActualWorkOrders) // Each work center will have many work orders
                        .HasForeignKey(e => e.WorkCenterId); // Foreign Key
             });
 

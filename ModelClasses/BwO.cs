@@ -7,7 +7,7 @@ using AviationMaintenanceManagementSystem.Features;
 
 namespace AviationMaintenanceManagementSystem.ModelClasses
 {
-    public abstract class BasicWorkOrder
+    public abstract class WorkOrderTemplate
     {
         public int JobNumber { get; set; }
         public string Discrepancy { get; set; }
@@ -19,7 +19,7 @@ namespace AviationMaintenanceManagementSystem.ModelClasses
         public int WorkCenterId { get; set; }   
         public WorkCenter WorkCenter { get; set; }//This is a navigation property
 
-        public abstract void CreateWorkOrder();
+        public  abstract void CreateWorkOrder();
         public abstract void Process(WorkCenter AssignedWC);
     }
 }

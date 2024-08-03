@@ -27,7 +27,7 @@ namespace AviationMaintenanceManagementSystem
         {
             if (int.TryParse(txtJobNumber.Text, out _) && int.TryParse(txtWorkCenterId.Text, out _))
             {
-            var workOrder = new CustomWorkOrder
+            var workOrder = new ActualWorkOrder
             {
 
                 JobNumber = int.Parse(txtJobNumber.Text),

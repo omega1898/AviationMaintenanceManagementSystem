@@ -9,7 +9,7 @@ using AviationMaintenanceManagementSystem.Features;
 
 namespace AviationMaintenanceManagementSystem.ModelClasses
 {
-    public class CustomWorkOrder : BasicWorkOrder
+    public class ActualWorkOrder : WorkOrderTemplate
     {
         //This is a new property for cases where special inductions are needed of different aviation assets
         //These assets have maintenance schedules that are different from the baselines established.

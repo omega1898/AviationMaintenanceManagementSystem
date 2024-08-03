@@ -17,12 +17,12 @@ namespace AviationMaintenanceManagementSystem.Features
         {
             _context = context;
         }
-        public IEnumerable<BasicWorkOrder> GetAllWorkOrders()
+        public IEnumerable<WorkOrderTemplate> GetAllWorkOrders()
         {
             //Thisn is to retrieve all work orders from the database.
             return _context.WorkOrders.ToList();
         }
-        public BasicWorkOrder GetWorkOrderById(int id)
+        public WorkOrderTemplate GetWorkOrderById(int id)
         {
             //This is to retrieve a specific work order by its id(which is the job number) from the database.
             var workOrder = _context.WorkOrders.Find(id);
@@ -36,10 +36,10 @@ namespace AviationMaintenanceManagementSystem.Features
                 return null;
             }
         }
-        public void CreateWorkOrder(BasicWorkOrder workOrder)
+        public void CreateWorkOrder(WorkOrderTemplate workOrder)
         {
             //Create a new work order in the database.
-            _context.WorkOrders.Add(workOrder);
+            _context.WorkOrders.Add((ActualWorkOrder)workOrder); // Casting the work order to an ActualWorkOrder.
             //You have to save the changes to the database.
             _context.SaveChanges();
         }
@@ -58,10 +58,10 @@ namespace AviationMaintenanceManagementSystem.Features
             }
 
         }
-        public void UpdateWorkOrder(BasicWorkOrder workOrder)
+        public void UpdateWorkOrder(WorkOrderTemplate workOrder)
         {
             //Update and save changes to a work order.
-            _context.WorkOrders.Update(workOrder);
+            _context.WorkOrders.Update((ActualWorkOrder)workOrder);// Casting the work order to an ActualWorkOrder.
             _context.SaveChanges();
         }
         public void ProcessWorkOrder(int id, WorkCenter AssignedWC)

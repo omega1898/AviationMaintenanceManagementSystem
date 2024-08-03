@@ -16,7 +16,7 @@ namespace AviationMaintenanceManagementSystem
     {
         private readonly IWorkOrderFeature _workOrderFeature;
 
-        private BasicWorkOrder _currentWorkOrder;
+        private WorkOrderTemplate _currentWorkOrder;
 
         public UpdateWorkOrder(IWorkOrderFeature workOrderFeature)
         {
